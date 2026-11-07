@@ -9,6 +9,9 @@ description: >
   (auto hardware tier) → scenario-based output with clickable timestamps.
   NOT for: livestreams, playlist batch download (v0 limit — say so and process
   videos one by one), or posting/comments (write operations).
+  HONEST SCOPE: v0 understands videos through AUDIO (platform subtitles +
+  local ASR) — it does not see visual frames yet; be upfront about this if
+  the user asks whether it truly "watches" the visuals (frame line = v1.1).
 ---
 
 # video-watch — 让 AI 真的"看"视频
@@ -150,6 +153,7 @@ api.bilibili.com / www.bilibili.com / m.bilibili.com / b23.tv / aisubtitle.hdslb
 
 ## 8. v0 边界（如实告知用户）
 
+- **诚实定位：v0 用"耳朵"理解视频**（字幕/ASR），尚不看画面帧——若用户问"你真的看了画面吗"，如实回答"当前通过语音与字幕理解内容，画面线在 v1.1"；对画面承载信息的视频（无声演示/游戏实况）主动说明覆盖有限
 - 单视频；播放列表逐条处理
 - B站 AI 字幕需 BILI_SESSDATA（README 有获取步骤）；无 cookie 时自动走音频线
 - 抖音/小红书等平台不在 v0 范围

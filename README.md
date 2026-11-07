@@ -6,7 +6,9 @@
 
 **English** | [中文](README.zh-CN.md)
 
-Let your AI agent *really* watch videos: drop a Bilibili/YouTube link, get back a structured digest with clickable timestamps.
+Let your AI agent *really* get videos: drop a Bilibili/YouTube link, get back a structured digest with clickable timestamps.
+
+**The honest pitch:** most of a video's meaning lives in its audio. So video-watch **listens first** — platform subtitles when they exist (instant, zero compute), local ASR when they don't — and only *looks* at frames when the picture actually carries the meaning (v1.1 roadmap). That's not a shortcut; it's the right order: **ears first, eyes when needed.**
 
 **The repo ships no models** — just code and instructions (a few dozen KB). Engines and models are auto-downloaded and cached on first run.
 
@@ -15,6 +17,7 @@ Let your AI agent *really* watch videos: drop a Bilibili/YouTube link, get back 
 ```
 URL → ① Metadata (free) → ② Subtitle line (90% of cases, instant) → ③ Audio line + local ASR (fallback)
      → ④ Scenario detection (agent) → ⑤ Templated output with clickable timestamps
+▸ ②③ are the ears — shipped in v0 · the frame line (eyes) lands in v1.1
 ```
 
 - **Subtitles first**: platform captions → digest in seconds, zero compute

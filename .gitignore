@@ -1,0 +1,13 @@
+__pycache__/
+.mimosa/
+test_*
+*.pyc
+*.wav
+*.m4a
+*.mp3
+*.part
+media/
+models/
+engines/
+*.timestamped.txt
+transcript*.txt
